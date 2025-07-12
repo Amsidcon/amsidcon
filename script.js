@@ -111,7 +111,7 @@ function submitQuiz() {
     timestamp: new Date().toLocaleString()
   };
 
-  fetch('https://script.google.com/macros/s/AKfycbyGuNrElsDESk0LCeeSLWI5CEx_QrkJq7aFEEbUNvPJYOZ7zSHWfxuNJdisuaHd-J8L/exec', {
+  fetch('https://script.google.com/macros/s/AKfycbws9z_jHbmh9VtWDZNOs4475mPjMBfgluC8fAAtUCZzW3H9amGbdVRAFbdDPrxETwO4/exec', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify(payload)
