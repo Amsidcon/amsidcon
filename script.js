@@ -1,0 +1,1 @@
+console.log('AMSIDCON Quiz Game Loaded');
