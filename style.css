@@ -1,1 +1,29 @@
-body { font-family: Arial; background: #f4f4f4; }
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to right, #e6f7ff, #ccf2ff);
+  text-align: center;
+  margin: 0; padding: 0;
+}
+#registration-screen, #quiz-screen {
+  padding: 20px;
+}
+input, button {
+  margin: 10px; padding: 10px;
+  font-size: 1em;
+}
+#quiz-board {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.card {
+  background: #fff;
+  border: 2px solid #007acc;
+  border-radius: 8px;
+  width: 140px; height: 100px;
+  margin: 10px;
+  display: flex;
+  align-items: center; justify-content: center;
+  cursor: pointer;
+}
+.hidden { display: none; }
