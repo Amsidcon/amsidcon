@@ -1,10 +1,26 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>AMSIDCON Quiz</title>
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AMSIDCON Quiz Game</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-<script src="script.js"></script>
+  <div id="registration-screen">
+    <h1>AMSIDCON Quiz Registration</h1>
+    <form id="registration-form">
+      <input type="text" id="name" placeholder="Your Name" required />
+      <input type="email" id="email" placeholder="Your Email" required />
+      <input type="tel" id="phone" placeholder="Your Phone" required />
+      <button type="submit">Start Game</button>
+    </form>
+  </div>
+  <div id="quiz-screen" class="hidden">
+    <h2 id="timer">Time: <span id="time">10:00</span></h2>
+    <div id="quiz-board"></div>
+    <button id="submit-btn">Submit Quiz</button>
+  </div>
+  <script src="script.js"></script>
 </body>
 </html>
