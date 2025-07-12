@@ -10,11 +10,11 @@ const quizBoard = document.getElementById('quiz-board');
 const submitBtn = document.getElementById('submit-btn');
 const timerDisplay = document.getElementById('time');
 
-// Load quiz questions from GitHub
+// Load questions
 fetch(questionURL)
   .then(response => response.json())
   .then(data => {
-    questions = data.sort(() => 0.5 - Math.random()); // Shuffle
+    questions = data.sort(() => 0.5 - Math.random());
     console.log("Questions loaded:", questions);
   })
   .catch(error => {
@@ -22,42 +22,12 @@ fetch(questionURL)
     alert("Failed to load quiz questions.");
   });
 
-// Registration form submission with duplicate check
-form.addEventListener('submit', async e => {
+form.addEventListener('submit', e => {
   e.preventDefault();
-
-  const name = document.getElementById('name').value.trim();
-  const email = document.getElementById('email').value.trim();
-  const phone = document.getElementById('phone').value.trim();
-  const hospital = document.getElementById('hospital')?.value || "";
-
-  try {
-    const res = await fetch('https://script.google.com/macros/s/AKfycbyGuNrElsDESk0LCeeSLWI5CEx_QrkJq7aFEEbUNvPJYOZ7zSHWfxuNJdisuaHd-J8L/exec');
-    const data = await res.json();
-
-    const exists = data.some(entry =>
-      entry.email?.toLowerCase() === email.toLowerCase() ||
-      entry.phone === phone
-    );
-
-    if (exists) {
-      alert("❗ You have already submitted using this Email or Phone Number.");
-      return;
-    }
-
-    // Allow to start game if no duplicate
-    registrationScreen.classList.add('hidden');
-    quizScreen.classList.remove('hidden');
-    startTimer();
-    waitAndLoadQuestions();
-
-  } catch (err) {
-    console.warn("⚠️ Duplicate check failed. Proceeding anyway.", err);
-    registrationScreen.classList.add('hidden');
-    quizScreen.classList.remove('hidden');
-    startTimer();
-    waitAndLoadQuestions();
-  }
+  registrationScreen.classList.add('hidden');
+  quizScreen.classList.remove('hidden');
+  startTimer();
+  waitAndLoadQuestions();
 });
 
 function startTimer() {
@@ -96,7 +66,7 @@ function showQuestionModal(questionObj, card) {
   modal.style.boxShadow = '0 0 10px rgba(0,0,0,0.3)';
 
   const options = ['A', 'B', 'C', 'D'].map(letter => {
-    return `<button class="opt-btn">${questionObj['Option ' + letter]}</button>`;
+    return `<button class="opt-btn"> ${questionObj['Option ' + letter]} </button>`;
   }).join('');
 
   modal.innerHTML = `
@@ -113,9 +83,9 @@ function showQuestionModal(questionObj, card) {
 
       if (isCorrect) {
         score++;
-        card.style.backgroundColor = '#b3ffcc'; // green
+        card.style.backgroundColor = '#b3ffcc';
       } else {
-        card.style.backgroundColor = '#ff9999'; // red
+        card.style.backgroundColor = '#ff9999';
       }
 
       totalAttempted++;
@@ -128,25 +98,35 @@ function showQuestionModal(questionObj, card) {
 submitBtn.onclick = submitQuiz;
 
 function submitQuiz() {
-  const name = document.getElementById('name').value.trim();
-  const email = document.getElementById('email').value.trim();
-  const phone = document.getElementById('phone').value.trim();
+  const name = document.getElementById('name').value;
+  const email = document.getElementById('email').value;
+  const phone = document.getElementById('phone').value;
   const hospital = document.getElementById('hospital')?.value || "";
+
+  const payload = {
+    name, email, phone, hospital,
+    score, totalAttempted,
+    correct: score,
+    wrong: totalAttempted - score,
+    timestamp: new Date().toLocaleString()
+  };
 
   fetch('https://script.google.com/macros/s/AKfycbyGuNrElsDESk0LCeeSLWI5CEx_QrkJq7aFEEbUNvPJYOZ7zSHWfxuNJdisuaHd-J8L/exec', {
     method: 'POST',
-    mode: 'no-cors',
     headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({
-      name, email, phone, hospital,
-      score,
-      totalAttempted,
-      correct: score,
-      wrong: totalAttempted - score,
-      timestamp: new Date().toLocaleString()
-    })
+    body: JSON.stringify(payload)
+  })
+  .then(response => response.text())
+  .then(text => {
+    if (text.includes("Duplicate entry")) {
+      alert("You have already submitted the quiz using this email or phone number.");
+    } else {
+      alert(`Submitted! Score: ${score}/${totalAttempted}`);
+      window.location.reload();
+    }
+  })
+  .catch(() => {
+    alert(`Submitted! Score: ${score}/${totalAttempted}`);
+    window.location.reload();
   });
-
-  alert(`✅ Submitted! Your Score: ${score}/${totalAttempted}`);
-  window.location.reload();
 }
