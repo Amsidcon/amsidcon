@@ -160,18 +160,21 @@ function submitQuiz() {
   const name = document.getElementById('name').value;
   const email = document.getElementById('email').value;
   const phone = document.getElementById('phone').value;
+  const hospital = document.getElementById('hospital').value;  // 👈 This is your new line
+
   fetch('https://script.google.com/macros/s/AKfycbyGuNrElsDESk0LCeeSLWI5CEx_QrkJq7aFEEbUNvPJYOZ7zSHWfxuNJdisuaHd-J8L/exec', {
     method: 'POST',
     mode: 'no-cors',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({
-      name, email, phone,
+      name, email, phone, hospital,     // 👈 Make sure to include 'hospital' here too
       score, totalAttempted,
       correct: score,
       wrong: totalAttempted - score,
       timestamp: new Date().toLocaleString()
     })
   });
+
   alert(`Submitted! Score: ${score}/${totalAttempted}`);
   window.location.reload();
 }
