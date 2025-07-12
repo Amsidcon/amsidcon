@@ -10,7 +10,7 @@ const quizBoard = document.getElementById('quiz-board');
 const submitBtn = document.getElementById('submit-btn');
 const timerDisplay = document.getElementById('time');
 
-// Load questions from GitHub
+// Load quiz questions from GitHub
 fetch(questionURL)
   .then(response => response.json())
   .then(data => {
@@ -22,12 +22,42 @@ fetch(questionURL)
     alert("Failed to load quiz questions.");
   });
 
-form.addEventListener('submit', e => {
+// Registration form submission with duplicate check
+form.addEventListener('submit', async e => {
   e.preventDefault();
-  registrationScreen.classList.add('hidden');
-  quizScreen.classList.remove('hidden');
-  startTimer();
-  waitAndLoadQuestions();
+
+  const name = document.getElementById('name').value.trim();
+  const email = document.getElementById('email').value.trim();
+  const phone = document.getElementById('phone').value.trim();
+  const hospital = document.getElementById('hospital')?.value || "";
+
+  try {
+    const res = await fetch('https://script.google.com/macros/s/AKfycbyGuNrElsDESk0LCeeSLWI5CEx_QrkJq7aFEEbUNvPJYOZ7zSHWfxuNJdisuaHd-J8L/exec');
+    const data = await res.json();
+
+    const exists = data.some(entry =>
+      entry.email?.toLowerCase() === email.toLowerCase() ||
+      entry.phone === phone
+    );
+
+    if (exists) {
+      alert("❗ You have already submitted using this Email or Phone Number.");
+      return;
+    }
+
+    // Allow to start game if no duplicate
+    registrationScreen.classList.add('hidden');
+    quizScreen.classList.remove('hidden');
+    startTimer();
+    waitAndLoadQuestions();
+
+  } catch (err) {
+    console.warn("⚠️ Duplicate check failed. Proceeding anyway.", err);
+    registrationScreen.classList.add('hidden');
+    quizScreen.classList.remove('hidden');
+    startTimer();
+    waitAndLoadQuestions();
+  }
 });
 
 function startTimer() {
@@ -44,7 +74,7 @@ function startTimer() {
 }
 
 function waitAndLoadQuestions() {
-  if (!questions.length) return setTimeout(waitAndLoadQuestions, 100); // Wait until loaded
+  if (!questions.length) return setTimeout(waitAndLoadQuestions, 100);
   questions.slice(0, 50).forEach((q, index) => {
     const card = document.createElement('div');
     card.className = 'card';
@@ -64,10 +94,9 @@ function showQuestionModal(questionObj, card) {
   modal.style.background = '#fff';
   modal.style.padding = '20px';
   modal.style.boxShadow = '0 0 10px rgba(0,0,0,0.3)';
-  
-  // Support for options defined as Option A/B/C/D
+
   const options = ['A', 'B', 'C', 'D'].map(letter => {
-    return `<button class="opt-btn"> ${questionObj['Option ' + letter]} </button>`;
+    return `<button class="opt-btn">${questionObj['Option ' + letter]}</button>`;
   }).join('');
 
   modal.innerHTML = `
@@ -76,7 +105,7 @@ function showQuestionModal(questionObj, card) {
   `;
   document.body.appendChild(modal);
 
-  document.querySelectorAll('.opt-btn').forEach((btn, idx) => {
+  document.querySelectorAll('.opt-btn').forEach(btn => {
     btn.onclick = () => {
       const selected = btn.textContent.trim();
       const correct = questionObj['Option ' + questionObj.correctAnswer].trim();
@@ -99,9 +128,9 @@ function showQuestionModal(questionObj, card) {
 submitBtn.onclick = submitQuiz;
 
 function submitQuiz() {
-  const name = document.getElementById('name').value;
-  const email = document.getElementById('email').value;
-  const phone = document.getElementById('phone').value;
+  const name = document.getElementById('name').value.trim();
+  const email = document.getElementById('email').value.trim();
+  const phone = document.getElementById('phone').value.trim();
   const hospital = document.getElementById('hospital')?.value || "";
 
   fetch('https://script.google.com/macros/s/AKfycbyGuNrElsDESk0LCeeSLWI5CEx_QrkJq7aFEEbUNvPJYOZ7zSHWfxuNJdisuaHd-J8L/exec', {
@@ -110,13 +139,14 @@ function submitQuiz() {
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({
       name, email, phone, hospital,
-      score, totalAttempted,
+      score,
+      totalAttempted,
       correct: score,
       wrong: totalAttempted - score,
       timestamp: new Date().toLocaleString()
     })
   });
 
-  alert(`Submitted! Score: ${score}/${totalAttempted}`);
+  alert(`✅ Submitted! Your Score: ${score}/${totalAttempted}`);
   window.location.reload();
 }
