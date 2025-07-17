@@ -1,10 +1,10 @@
-<!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>AMSIDCON 2025 Quiz Game</title>
+  <title>AMSIDCON Quiz Game</title>
   <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
   <div id="registration-screen">
@@ -13,16 +13,24 @@
       <input type="text" id="name" placeholder="Your Name" required />
       <input type="email" id="email" placeholder="Your Email" required />
       <input type="tel" id="phone" placeholder="Your Phone" required />
-      <input type="text" id="hospital" placeholder="Institute/Hospital Name" required />
+      <input type="text" id="hospital" placeholder="Your Hospital" required />
       <button type="submit">Start Game</button>
     </form>
   </div>
+
   <div id="quiz-screen" class="hidden">
     <h2 id="timer">Time: <span id="time">10:00</span></h2>
     <div id="quiz-board"></div>
     <button id="submit-btn">Submit Quiz</button>
   </div>
-  <script src="script.js"></script>
+
+  <div id="result-screen" class="hidden">
+    <div class="confetti"></div>
+    <h2 class="animated fadeIn">🎉 Congratulations! 🎉</h2>
+    <p id="result-text" class="animated fadeInUp"></p>
+    <p class="message">Thanks for participating in the AMSIDCON Quiz. We hope you had fun and learned something new! 😊</p>
+  </div>
+
   <script src="script.js"></script>
 </body>
 </html>
