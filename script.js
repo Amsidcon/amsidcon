@@ -1,38 +1,52 @@
-let questions = [];
-let score = 0, totalAttempted = 0;
-let timeLeft = 600;
-
-const questionURL = "https://raw.githubusercontent.com/Amsidcon/amsidcon/main/questions.json";
 const form = document.getElementById('registration-form');
 const registrationScreen = document.getElementById('registration-screen');
 const quizScreen = document.getElementById('quiz-screen');
+const resultScreen = document.getElementById('result-screen');
 const quizBoard = document.getElementById('quiz-board');
 const submitBtn = document.getElementById('submit-btn');
 const timerDisplay = document.getElementById('time');
+const resultText = document.getElementById('result-text');
 
-// Load questions
-fetch(questionURL)
-  .then(response => response.json())
-  .then(data => {
-    questions = data.sort(() => 0.5 - Math.random());
-    console.log("Questions loaded:", questions);
-  })
-  .catch(error => {
-    console.error("Error loading questions:", error);
-    alert("Failed to load quiz questions.");
-  });
+let timeLeft = 600;
+let score = 0, totalAttempted = 0;
+let userInfo = {}, startTime, endTime;
 
-form.addEventListener('submit', e => {
+const GOOGLE_APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycby4NMmB884evgntTBRZkHu6LmgN4RtnCIqGk5Z9eoH4ydt1lPJxis6juX_JXhu5-z8L/exec';
+
+form.addEventListener('submit', async (e) => {
   e.preventDefault();
+  userInfo.name = document.getElementById('name').value.trim();
+  userInfo.email = document.getElementById('email').value.trim();
+  userInfo.phone = document.getElementById('phone').value.trim();
+  userInfo.hospital = document.getElementById('hospital').value.trim();
+
+  const formData = new FormData();
+  formData.append("name", userInfo.name);
+  formData.append("email", userInfo.email);
+  formData.append("phone", userInfo.phone);
+  formData.append("hospital", userInfo.hospital);
+
+  const response = await fetch(GOOGLE_APPS_SCRIPT_URL, {
+    method: 'POST',
+    body: formData
+  });
+  const text = await response.text();
+  if (!text.includes("Registration successful")) {
+    alert("⚠️ You have already attempted the quiz with this Email or Phone number.");
+    return;
+  }
+
   registrationScreen.classList.add('hidden');
   quizScreen.classList.remove('hidden');
+  startTime = new Date();
   startTimer();
-  waitAndLoadQuestions();
+  loadQuestions();
 });
 
 function startTimer() {
   const interval = setInterval(() => {
     timeLeft--;
+    if (timeLeft <= 60) document.getElementById('timer').classList.add('red');
     const minutes = Math.floor(timeLeft / 60).toString().padStart(2, '0');
     const seconds = (timeLeft % 60).toString().padStart(2, '0');
     timerDisplay.textContent = `${minutes}:${seconds}`;
@@ -43,90 +57,85 @@ function startTimer() {
   }, 1000);
 }
 
-function waitAndLoadQuestions() {
-  if (!questions.length) return setTimeout(waitAndLoadQuestions, 100);
-  questions.slice(0, 50).forEach((q, index) => {
-    const card = document.createElement('div');
-    card.className = 'card';
-    card.innerHTML = `<strong>Q${index + 1}</strong>`;
-    card.onclick = () => showQuestionModal(q, card);
-    quizBoard.appendChild(card);
-  });
+function loadQuestions() {
+  fetch('questions.json')
+    .then(res => res.json())
+    .then(data => {
+      const shuffled = shuffleArray(data).slice(0, 50);
+      shuffled.forEach((q, index) => {
+        const card = document.createElement('div');
+        card.className = 'card';
+        card.innerHTML = `<strong>Q${index + 1}</strong>`;
+        card.onclick = () => showQuestionModal(q, card);
+        quizBoard.appendChild(card);
+      });
+    });
+}
+
+function shuffleArray(array) {
+  const arr = [...array];
+  for (let i = arr.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [arr[i], arr[j]] = [arr[j], arr[i]];
+  }
+  return arr;
 }
 
 function showQuestionModal(questionObj, card) {
+  const options = Object.entries(questionObj)
+    .filter(([key]) => key.startsWith("Option"))
+    .map(([_, value]) => value);
+  const correct = questionObj[`Option ${questionObj.correctAnswer}`];
   const modal = document.createElement('div');
   modal.className = 'modal';
-  modal.style.position = 'fixed';
-  modal.style.top = '50%';
-  modal.style.left = '50%';
-  modal.style.transform = 'translate(-50%, -50%)';
-  modal.style.background = '#fff';
-  modal.style.padding = '20px';
-  modal.style.boxShadow = '0 0 10px rgba(0,0,0,0.3)';
-
-  const options = ['A', 'B', 'C', 'D'].map(letter => {
-    return `<button class="opt-btn"> ${questionObj['Option ' + letter]} </button>`;
-  }).join('');
-
-  modal.innerHTML = `
-    <p><strong>${questionObj.question}</strong></p>
-    ${options}
-  `;
+  modal.innerHTML = `<p><strong>${questionObj.question}</strong></p>
+    ${options.map(opt => `<button class="opt-btn">${opt}</button>`).join('')}`;
   document.body.appendChild(modal);
-
   document.querySelectorAll('.opt-btn').forEach(btn => {
     btn.onclick = () => {
-      const selected = btn.textContent.trim();
-      const correct = questionObj['Option ' + questionObj.correctAnswer].trim();
-      const isCorrect = selected === correct;
-
-      if (isCorrect) {
+      if (btn.textContent === correct) {
         score++;
         card.style.backgroundColor = '#b3ffcc';
       } else {
         card.style.backgroundColor = '#ff9999';
       }
-
       totalAttempted++;
-      card.onclick = null;
+      card.style.pointerEvents = 'none';
       document.body.removeChild(modal);
     };
   });
 }
 
-submitBtn.onclick = submitQuiz;
+submitBtn.onclick = () => {
+  if (totalAttempted === 0) {
+    alert('Please answer at least one question.');
+    return;
+  }
+  submitQuiz();
+};
 
 function submitQuiz() {
-  const name = document.getElementById('name').value;
-  const email = document.getElementById('email').value;
-  const phone = document.getElementById('phone').value;
-  const hospital = document.getElementById('hospital')?.value || "";
+  quizScreen.classList.add('hidden');
+  resultScreen.classList.remove('hidden');
 
-  const payload = {
-    name, email, phone, hospital,
-    score, totalAttempted,
-    correct: score,
-    wrong: totalAttempted - score,
-    timestamp: new Date().toLocaleString()
-  };
+  endTime = new Date();
+  const timeTakenSec = Math.floor((endTime - startTime) / 1000);
+  const timeTakenStr = `${Math.floor(timeTakenSec / 60)}m ${timeTakenSec % 60}s`;
 
-  fetch('https://script.google.com/macros/s/AKfycbws9z_jHbmh9VtWDZNOs4475mPjMBfgluC8fAAtUCZzW3H9amGbdVRAFbdDPrxETwO4/exec', {
+  const quizFormData = new FormData();
+  quizFormData.append("name", userInfo.name);
+  quizFormData.append("email", userInfo.email);
+  quizFormData.append("phone", userInfo.phone);
+  quizFormData.append("totalAttempted", totalAttempted);
+  quizFormData.append("correct", score);
+  quizFormData.append("wrong", totalAttempted - score);
+  quizFormData.append("timeTaken", timeTakenStr);
+  quizFormData.append("timestamp", new Date().toLocaleString());
+
+  fetch(GOOGLE_APPS_SCRIPT_URL, {
     method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify(payload)
-  })
-  .then(response => response.text())
-  .then(text => {
-    if (text.includes("Duplicate entry")) {
-      alert("You have already submitted the quiz using this email or phone number.");
-    } else {
-      alert(`Submitted! Score: ${score}/${totalAttempted}`);
-      window.location.reload();
-    }
-  })
-  .catch(() => {
-    alert(`Submitted! Score: ${score}/${totalAttempted}`);
-    window.location.reload();
+    body: quizFormData
   });
+
+  resultText.textContent = `🎯 You answered ${totalAttempted} questions.\n✅ Correct: ${score} | ❌ Wrong: ${totalAttempted - score}\n⏱ Time Taken: ${timeTakenStr}`;
 }
