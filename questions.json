@@ -1,602 +1,402 @@
 [
-  {
-    "question": "Which penicillin has anti-pseudomonal activity",
-    "Option A": "Piperacillin",
-    "Option B": "Amoxicillin",
-    "Option C": "Penicillin-G",
-    "Option D": "Cloxacillin",
-    "correctAnswer": "A"
-  },
-  {
-    "question": "Trimethoprim/Sulfamethoxazole standard drug ratio",
-    "Option A": "1:2 ratio",
-    "Option B": "1:5 ratio",
-    "Option C": "2:8 ratio",
-    "Option D": "1:1 ratio",
-    "correctAnswer": "B"
-  },
-  {
-    "question": "Trimethoprim/Sulfamethoxazole has good activity against",
-    "Option A": "Pseudomonas",
-    "Option B": "enterococci",
-    "Option C": "anaerobes",
-    "Option D": "Staphylococcus aureus",
-    "correctAnswer": "D"
-  },
-  {
-    "question": "Which test is helpful to detect inducible resistance in Clindamycin",
-    "Option A": "D-Test",
-    "Option B": "MALDI-TOF",
-    "Option C": "Kirby-Bauer test",
-    "Option D": "E-Test",
-    "correctAnswer": "A"
-  },
-  {
-    "question": "Which antibiotic has the ability to penentrate biofilm",
-    "Option A": "Rifampin",
-    "Option B": "Vancomycin",
-    "Option C": "Amoxicillin",
-    "Option D": "Piperacillin/Tazobactam",
-    "correctAnswer": "A"
-  },
-  {
-    "question": "Which gene will cause High-level resistance to both Vancomycin and Teicoplanin",
-    "Option A": "VanA",
-    "Option B": "VanB",
-    "Option C": "VanC",
-    "Option D": "VanE",
-    "correctAnswer": "A"
-  },
-  {
-    "question": "Find out the mold fungi",
-    "Option A": "Candida Sp.",
-    "Option B": "Fusarium",
-    "Option C": "Cryptococcus",
-    "Option D": "Histoplasma",
-    "correctAnswer": "B"
-  },
-  {
-    "question": "Itraconazole has NO ACTIVITY against (Intrinsically resistant)",
-    "Option A": "Candida Sp.",
-    "Option B": "Cryptococcus",
-    "Option C": "C. albicans",
-    "Option D": "Aspergillus",
-    "correctAnswer": "D"
-  },
-  {
-    "question": "Echinocandins has Good activity against",
-    "Option A": "Candida Sp.",
-    "Option B": "Fusarium",
-    "Option C": "Mucormycosis",
-    "Option D": "Cryptococcus",
-    "correctAnswer": "A"
-  },
-  {
-    "question": "Echinocandidns has Good CNS penetration",
-    "Option A": "TRUE",
-    "Option B": "FALSE",
-    "Option C": "Maye be",
-    "Option D": "Don't know",
-    "correctAnswer": "B"
-  },
-  {
-    "question": "Echinocandins Pregnancy Class",
-    "Option A": "Class A",
-    "Option B": "Class B",
-    "Option C": "Class C",
-    "Option D": "Class X",
-    "correctAnswer": "C"
-  },
-  {
-    "question": "Which antibiotic doesn't require renal dose adjustment",
-    "Option A": "Levofloxacin",
-    "Option B": "Vancomycin",
-    "Option C": "Clindamycin",
-    "Option D": "Ampicillin",
-    "correctAnswer": "C"
-  },
-  {
-    "question": "Identify the clean-contaminated Surgery",
-    "Option A": "Hernia repair",
-    "Option B": "LSCS with no spillage",
-    "Option C": "TKR",
-    "Option D": "Cholecystectomy with bile spillage",
-    "correctAnswer": "B"
-  },
-  {
-    "question": "When stained using gram stain Gram positive bacteria will appear in which color?",
-    "Option A": "Pink",
-    "Option B": "Purple",
-    "Option C": "Blue",
-    "Option D": "Red",
-    "correctAnswer": "B"
-  },
-  {
-    "question": "Identify the Gram negative anaerobic species",
-    "Option A": "Actinomyces Spp.",
-    "Option B": "Lactobacillus spp.",
-    "Option C": "Bacteroides spp.",
-    "Option D": "Peptostreptococcus spp.",
-    "correctAnswer": "C"
-  },
-  {
-    "question": "Foul smelling pus discharge is a characteristic of",
-    "Option A": "Gram negative Infection",
-    "Option B": "Gram positive Infection",
-    "Option C": "Aerobic Infection",
-    "Option D": "Anaerobic Infection",
-    "correctAnswer": "D"
-  },
-  {
-    "question": "Macrolides MOA invovles inhibitting",
-    "Option A": "50s subunit",
-    "Option B": "30s Subunit",
-    "Option C": "Cell wall synthesis",
-    "Option D": "DNA Gyrase",
-    "correctAnswer": "A"
-  },
-  {
-    "question": "Identify the 1st Generation Cephalosporin",
-    "Option A": "Cefuroxime",
-    "Option B": "Cefazolin",
-    "Option C": "Cefoperazone",
-    "Option D": "Cefepime",
-    "correctAnswer": "B"
-  },
-  {
-    "question": "Identify the 4th Generation Cephalosporin",
-    "Option A": "Cefepime",
-    "Option B": "Ceftaroline",
-    "Option C": "Ceftriaxone",
-    "Option D": "Cefuroxime",
-    "correctAnswer": "A"
-  },
-  {
-    "question": "Nitrofurantoin is contraindicated in 3rd trimester pregnancy",
-    "Option A": "TRUE",
-    "Option B": "FALSE",
-    "Option C": "May be",
-    "Option D": "Don't know",
-    "correctAnswer": "A"
-  },
-  {
-    "question": "Theme of World AMR Awareness week-2025",
-    "Option A": "Preventing Antimicrobial Resistance Together",
-    "Option B": "Act Now: Protect Our Present, Secure Our Future",
-    "Option C": "Educate. Advocate. Act now",
-    "Option D": "United to preserve antimicrobials",
-    "correctAnswer": "B"
-  },
-  {
-    "question": "1st choice of vasopressor in Sepsis & Septic shock",
-    "Option A": "Dopamine",
-    "Option B": "Vasopressin",
-    "Option C": "Norepinephrine",
-    "Option D": "Hydroxyethyl starch",
-    "correctAnswer": "C"
-  },
-  {
-    "question": "What is the most common pathogen to cause skin & soft tissue infections?",
-    "Option A": "Pseudomonas",
-    "Option B": "E.coli",
-    "Option C": "Staph. aureus",
-    "Option D": "Acinetobacter baumannii",
-    "correctAnswer": "C"
-  },
-  {
-    "question": "What is the condition characterized by red, swollen, tender nodules on hair-bearing areas due to a deep hair follicle infection with abscess, pus, and necrotic tissue, commonly caused by Staphylococcus aureus.",
-    "Option A": "Carbuncle",
-    "Option B": "Furunculosis",
-    "Option C": "Necrotizing fasciitis",
-    "Option D": "Cellulitis",
-    "correctAnswer": "B"
-  },
-  {
-    "question": "Treatment duration for Haematogenous Osteomyelitis with subperiosteal collection abscess necrotic bone",
-    "Option A": "10-14 days",
-    "Option B": "2-5 days",
-    "Option C": "3 weeks",
-    "Option D": "4-6 weeks",
-    "correctAnswer": "D"
-  },
-  {
-    "question": "Specific marker for bacterial Infection",
-    "Option A": "CRP",
-    "Option B": "PCT",
-    "Option C": "ESR",
-    "Option D": "WBC",
-    "correctAnswer": "B"
-  },
-  {
-    "question": "Identify the antibiotic which has poor pus penetration",
-    "Option A": "Clindamycin",
-    "Option B": "Amikacin",
-    "Option C": "Metronidazole",
-    "Option D": "Ciprofloxacin",
-    "correctAnswer": "B"
-  },
-  {
-    "question": "XX, a 45-year-old male with a past medical history of hypertension, presents to his primary care doctor with a three-day history of malaise, headache, body aches, subjective fever, and non-productive cough. He is diagnosed with influenza confirmed by reverse transcription polymerase chain reaction testing but is otherwise clinically stable and does not require hospitalization. Which of the following is most appropriate for XX at this time?",
-    "Option A": "Do not initiate any antiviral medication",
-    "Option B": "Initiate oral oseltamivir",
-    "Option C": "Initiate oral amantadine",
-    "Option D": "Initiate inhaled zanamivir",
-    "correctAnswer": "A"
-  },
-  {
-    "question": "GT is a 33-year-old nurse with a positive tuberculin skin test of greater than 5 mm. A T-SPOT test confirms she has latent tuberculosis infection (LTBI). GT has high blood pressure and takes lisinopril. Additionally, she takes ethinyl estradiol/levonorgestrel for birth control and to help regulate menstruation. She takes ibuprofen for occasional muscle aches; otherwise, she is healthy and would like to begin treatment for LTBI. Which regimen would be most appropriate for GT?",
-    "Option A": "Rifapentine 600 mg and isoniazid 300 mg once weekly for 3 months",
-    "Option B": "Isoniazid 300 mg for 6 months",
-    "Option C": "Rifampin 600 mg and pyrazinamide for 2 months",
-    "Option D": "Rifampin 600 mg for 9 months",
-    "correctAnswer": "B"
-  },
-  {
-    "question": "Which regimen is most appropriate during the continuation phase for treating a 75-kg patient co-infected with pulmonary TB and HIV? The patient is not taking any antiretrovirals for treatment of HIV.",
-    "Option A": "Rifampin 600 mg and isoniazid 300 mg daily",
-    "Option B": "Rifabutin 300 mg and isoniazid 900 twice weekly",
-    "Option C": "Rifapentine 600 mg and isoniazid 900 mg once weekly",
-    "Option D": "Rifampin 600 mg and isoniazid 900 mg twice weekly",
-    "correctAnswer": "A"
-  },
-  {
-    "question": "LM is a 28-year-old man with HIV with a diagnosis of active TB. He currently takes a daily TB regimen of rifabutin 150 mg, isoniazid 300 mg, pyrazinamide 1500 mg, and ethambutol 800 mg and an HIV regimen of raltegravir 400 mg twice daily plus 200 mg emtricitabine/300 mg tenofovir disoproxil fumarate. He returns for a follow-up appointment 1 month after beginning his TB treatment with complaints of blurred vision. Further testing shows he has lost the ability to detect the color green. Which medication is most likely responsible?",
-    "Option A": "Rifabutin",
-    "Option B": "Pyrazinamide",
-    "Option C": "Isoniazid",
-    "Option D": "Ethambutol",
-    "correctAnswer": "B"
-  },
-  {
-    "question": "Which scenario is not considered as an Surgical Site Infection?",
-    "Option A": "Purulent drainage, without laboratory confirmation, from the superficial\n incision.",
-    "Option B": "Infection of an episiotomy",
-    "Option C": "Organisms isolated from an aseptically obtained culture of fluid from\n the superficial incision.",
-    "Option D": "Diagnosis of superficial incisional SSI by the surgeon",
-    "correctAnswer": "B"
-  },
-  {
-    "question": "Turnaround time for Xpert C. difficile assay (Xpert\n CD assay; Cepheid )",
-    "Option A": "20 minutes",
-    "Option B": "1 hour",
-    "Option C": "2 hours",
-    "Option D": "4 hours",
-    "correctAnswer": "B"
-  },
-  {
-    "question": "Systemic absorption rate of oral Vancomycin",
-    "Option A": "Less than 5%",
-    "Option B": "Less than 15%",
-    "Option C": "More than 50%",
-    "Option D": "Around 80%",
-    "correctAnswer": "A"
-  },
-  {
-    "question": "CRBSI full form",
-    "Option A": "Centralline Related Blood Stream Infection",
-    "Option B": "Chronic Respiratory Bacterial Sinus Infection",
-    "Option C": "Catheter Related Blood Stream Infection",
-    "Option D": "Chronic Recurrent Bacterial Skin Infection",
-    "correctAnswer": "C"
-  },
-  {
-    "question": "Does routine use of prophylactic antimicrobials at the time of catheter removal is needed?",
-    "Option A": "Yes",
-    "Option B": "No",
-    "Option C": "Maye be",
-    "Option D": "Don't know",
-    "correctAnswer": "B"
-  },
-  {
-    "question": "Which granulocyte of WBC will elevated in Parasitic Infection?",
-    "Option A": "Neutrophils",
-    "Option B": "Basophils",
-    "Option C": "Eosinophils",
-    "Option D": "Lymphocytes",
-    "correctAnswer": "C"
-  },
-  {
-    "question": "CURB-65 is used to rule out",
-    "Option A": "Community acquired pneumoniae",
-    "Option B": "Sepsis",
-    "Option C": "Osteomyelitis",
-    "Option D": "Septic arthritis",
-    "correctAnswer": "A"
-  },
-  {
-    "question": "Dukes criteria is used to diagnose",
-    "Option A": "Vascular diseases",
-    "Option B": "Infective endocarditis",
-    "Option C": "Septic arthritis",
-    "Option D": "Necrotizing fascitis",
-    "correctAnswer": "B"
-  },
-  {
-    "question": "Measles Incubation period",
-    "Option A": "2-5 days",
-    "Option B": "10-12 days",
-    "Option C": "30-45 days",
-    "Option D": "3 months",
-    "correctAnswer": "B"
-  },
-  {
-    "question": "Which of the following diseases is NOT typically prevented by routine travel vaccination?",
-    "Option A": "Typhoid fever",
-    "Option B": "Hepatitis A",
-    "Option C": "Malaria",
-    "Option D": "Japanese encephalitis",
-    "correctAnswer": "C"
-  },
-  {
-    "question": "Which infection requires vaccination and also avoidance of unpasteurized dairy products during travel?",
-    "Option A": "Hepatitis B",
-    "Option B": "Brucellosis",
-    "Option C": "Typhoid fever",
-    "Option D": "Cholera",
-    "correctAnswer": "B"
-  },
-  {
-    "question": "A 34Y/O male came to ER with the complaints of chest pain radiating toward the left upper limb and back and shortness of breath for the past 2 days. Weakness of B/L UL and fatigue since yesterday night. H/O loss of appetite and nausea. No H/O fever, or vomiting. Cultures have been sent and blood C/S has no growth and Urine C/S shows ESBL E.coli. WHAT IS YOUR TREATMENT OPTION?",
-    "Option A": "Tab. Nitrofurantoin 100mg BD",
-    "Option B": "Inj. Meropenem 1g TDS",
-    "Option C": "Inj. Ceftazidime/Avibactam 2.5g BD",
-    "Option D": "No antibiotic treatment",
-    "correctAnswer": "D"
-  },
-  {
-    "question": "Bacteroides fragilis belongs to which group",
-    "Option A": "Gram positive Aerobe",
-    "Option B": "Gram negative aerobe",
-    "Option C": "Gram positive anaerobe",
-    "Option D": "Gram negative anaerobe",
-    "correctAnswer": "D"
-  },
-  {
-    "question": "Why are antibiograms important in clinical practice?",
-    "Option A": "To identify the specific genetic mutations responsible for antibiotic resistance",
-    "Option B": "To monitor trends in antibiotic side effects across hospital units",
-    "Option C": "To assess the clinical efficacy of antibiotics in individual patients",
-    "Option D": "To guide empiric antibiotic therapy based on local resistance patterns",
-    "correctAnswer": "D"
-  },
-  {
-    "question": "How often are hospital antibiograms typically updated?",
-    "Option A": "Monthly",
-    "Option B": "Anually",
-    "Option C": "Every 3 months",
-    "Option D": "Every 5 years",
-    "correctAnswer": "B"
-  },
-  {
-    "question": "GLASS Abbrevation",
-    "Option A": "Global Laboratory for Antimicrobial Sensitivity Surveillance",
-    "Option B": "Global Antimicrobial Resistance Surveillance System",
-    "Option C": "Generalized Laboratory Assessment of Safety Standards",
-    "Option D": "Global Alliance for Surveillance of Sepsis",
-    "correctAnswer": "B"
-  },
-  {
-    "question": "What is the correct definition of MDR (Multidrug-Resistant) pathogens?",
-    "Option A": "Resistant to at least one agent in three or more antimicrobial categories",
-    "Option B": "Resistant to all agents within a single antimicrobial class",
-    "Option C": "Resistant to all but two or fewer antimicrobial categories",
-    "Option D": "Resistant to at least two agents in two or more antimicrobial categories",
-    "correctAnswer": "A"
-  },
-  {
-    "question": "Identify the Hydrophilic agent?",
-    "Option A": "Aminoglycoside",
-    "Option B": "Quinolones",
-    "Option C": "Macrolides",
-    "Option D": "Linezolid",
-    "correctAnswer": "A"
-  },
-  {
-    "question": "Identify the Lipophilic agent?",
-    "Option A": "Vancomycin",
-    "Option B": "Tetracycline",
-    "Option C": "Daptomycin",
-    "Option D": "Polymixins",
-    "correctAnswer": "B"
-  },
-  {
-    "question": "Which is the Antistaphylococcal Penicillin",
-    "Option A": "Dicloxacillin",
-    "Option B": "Piperacillin/Tazobactam",
-    "Option C": "Penicillin-G",
-    "Option D": "Amoxicillin",
-    "correctAnswer": "A"
-  },
-  {
-    "question": "Which drug has major interaction with Meropenem",
-    "Option A": "Metronidazole",
-    "Option B": "Metoprolol",
-    "Option C": "Atorvastatin",
-    "Option D": "Sodium Valproate",
-    "correctAnswer": "D"
-  },
-  {
-    "question": "What is the recommended frequency of Cefazolin 2g in a adult with Normal LFT and RFT?",
-    "Option A": "OD",
-    "Option B": "BD",
-    "Option C": "TDS",
-    "Option D": "Q6H",
-    "correctAnswer": "C"
-  },
-  {
-    "question": "Choose the Concentration dependent antibiotic",
-    "Option A": "Imipenem",
-    "Option B": "Amoxicillin",
-    "Option C": "Levofloxacin",
-    "Option D": "Cefazolin",
-    "correctAnswer": "C"
-  },
-  {
-    "question": "Choose the Time dependent antibiotic",
-    "Option A": "Piperacillin/Tazobactam",
-    "Option B": "Gentamycin",
-    "Option C": "Levofloxacin",
-    "Option D": "Daptomycin",
-    "correctAnswer": "A"
-  },
-  {
-    "question": "Which antibiotic will be inactivated by lung surfactants?",
-    "Option A": "Linezolid",
-    "Option B": "Daptomycin",
-    "Option C": "Vancomycin",
-    "Option D": "Clindamycin",
-    "correctAnswer": "B"
-  },
-  {
-    "question": "Which infection requires specifically Droplet precaution",
-    "Option A": "Scabies",
-    "Option B": "Impetigo",
-    "Option C": "Influenza",
-    "Option D": "Measles",
-    "correctAnswer": "C"
-  },
-  {
-    "question": "C. difficile causes diarrhea as a result of pseudomembranous colitis",
-    "Option A": "TRUE",
-    "Option B": "FALSE",
-    "Option C": "Maye be",
-    "Option D": "Don't know",
-    "correctAnswer": "A"
-  },
-  {
-    "question": "Facultative anaerobes",
-    "Option A": "Requires O2 to grow",
-    "Option B": "Does not require O2 to grow",
-    "Option C": "Can grow in the presence & absence of O2",
-    "Option D": "Can grow only in the absence of O2",
-    "correctAnswer": "C"
-  },
-  {
-    "question": "Which organism is Intrinsically Resistant to Tigecycline",
-    "Option A": "Morganella morganii",
-    "Option B": "viridans group",
-    "Option C": "Enterococcus faecalis",
-    "Option D": "Staph. Aureus",
-    "correctAnswer": "A"
-  },
-  {
-    "question": "Which antibiotic can not be diluted in Noraml Saline (NS)",
-    "Option A": "Ertapenem",
-    "Option B": "Cotrimoxazole",
-    "Option C": "Gentamycin",
-    "Option D": "Clindamycin",
-    "correctAnswer": "B"
-  },
-  {
-    "question": "Cephalosporins are Bacteriostatic",
-    "Option A": "TRUE",
-    "Option B": "FALSE",
-    "Option C": "Maye be",
-    "Option D": "Don't know",
-    "correctAnswer": "B"
-  },
-  {
-    "question": "According to 2024 WHO Bacterial Priority pathogen list; which organism comes under \"Critical Group\"?",
-    "Option A": "Vancomycin R Enterococcus faecium",
-    "Option B": "Macrolide R streptococcus",
-    "Option C": "3rd gen Cephalosporin R Enterobacterales",
-    "Option D": "Ampicillin R Haemophilus influenzae",
-    "correctAnswer": "C"
-  },
-  {
-    "question": "Identify the Live attenuated Vaccine",
-    "Option A": "Cholera",
-    "Option B": "Typhoid",
-    "Option C": "Rabies",
-    "Option D": "Varicella",
-    "correctAnswer": "D"
-  },
-  {
-    "question": "Identify the Killed (Inactivated) Vaccine",
-    "Option A": "Japanese Encephalitis",
-    "Option B": "Zostavax",
-    "Option C": "MMR",
-    "Option D": "Rotavirus",
-    "correctAnswer": "A"
-  },
-  {
-    "question": "Which of the following best explains why polysaccharide vaccines (like PPSV23) are poorly immunogenic in children under 2 years of age?",
-    "Option A": "Immature complement system",
-    "Option B": "Lack of T-cell-independent response",
-    "Option C": "Immature B-cell memory response",
-    "Option D": "Lack of mucosal IgA production",
-    "correctAnswer": "B"
-  },
-  {
-    "question": "Which type of vaccine is the oral polio vaccine (OPV)?",
-    "Option A": "Killed",
-    "Option B": "Live attenuated",
-    "Option C": "Toxoid",
-    "Option D": "Subunit",
-    "correctAnswer": "B"
-  },
-  {
-    "question": "Tetanus toxoid (TT) vaccine provides protection by stimulating production of?",
-    "Option A": "Neutralizing antibodies",
-    "Option B": "Memory T cells",
-    "Option C": "Interleukins",
-    "Option D": "Interferons",
-    "correctAnswer": "A"
-  },
-  {
-    "question": "What is the minimum contact time recommended for alcohol-based hand rubs to be effective?",
-    "Option A": "5 seconds",
-    "Option B": "10 seconds",
-    "Option C": "20 seconds",
-    "Option D": "60 seconds",
-    "correctAnswer": "C"
-  },
-  {
-    "question": "Which disinfectant is most effective against Clostridioides difficile spores on surfaces?",
-    "Option A": "1:10 dilution of sodium hypochlorite (bleach)",
-    "Option B": "70% isopropyl alcohol",
-    "Option C": "0.5% hydrogen peroxide",
-    "Option D": "Chlorhexidine",
-    "correctAnswer": "A"
-  },
-  {
-    "question": "In a sterile surgical setting, how far from the sterile field should non-sterile personnel maintain distance to avoid contamination?",
-    "Option A": "6 inches",
-    "Option B": "1 foot",
-    "Option C": "2 feet",
-    "Option D": "3 feet",
-    "correctAnswer": "C"
-  },
-  {
-    "question": "Which of the following is the correct order for donning personal protective equipment (PPE)?",
-    "Option A": "Gloves → Gown → Mask → Eye protection",
-    "Option B": "Gown → Mask → Eye protection → Gloves",
-    "Option C": "Mask → Gloves → Gown → Eye protection",
-    "Option D": "Gown → Gloves → Mask → Eye protection",
-    "correctAnswer": "B"
-  },
-  {
-    "question": "Which of the following organisms requires contact plus droplet precautions when isolated in a hospital setting?",
-    "Option A": "MRSA",
-    "Option B": "Influenza",
-    "Option C": "Norovirus",
-    "Option D": "Respiratory Syncytial Virus",
-    "correctAnswer": "D"
-  },
-  {
-    "question": "Which of the following is the most common source of pathogens in healthcare-associated infections?",
-    "Option A": "Hospital air",
-    "Option B": "Healthcare workers’ hands",
-    "Option C": "Contaminated medications",
-    "Option D": "Visitors",
-    "correctAnswer": "B"
-  },
-  {
-    "question": "Which of the following strategies is best supported by evidence for reducing surgical site infections (SSIs)?",
-    "Option A": "Post-operative antibiotic prophylaxis for 72 hours",
-    "Option B": "Preoperative skin shaving 12 hours before surgery",
-    "Option C": "Use of chlorhexidine-alcohol for preoperative skin antisepsis",
-    "Option D": "Use of sterile gloves only for closing the wound",
-    "correctAnswer": "C"
-  }
+ {
+  "question": "Which of the following is a core principle of Antimicrobial Stewardship?",
+  "Option A": "Minimize healthcare costs only",
+  "Option B": "Prescribe empirically without review",
+  "Option C": "Optimize antimicrobial use",
+  "Option D": "Delay therapy until cultures return",
+  "correctAnswer": "C"
+ },
+ {
+  "question": "What is the recommended duration of therapy for uncomplicated UTI in females?",
+  "Option A": "1 day",
+  "Option B": "3 to 5 days",
+  "Option C": "7 to 10 days",
+  "Option D": "14 days",
+  "correctAnswer": "B"
+ },
+ {
+  "question": "Which organism is intrinsically resistant to vancomycin?",
+  "Option A": "Staphylococcus aureus",
+  "Option B": "Enterococcus faecium",
+  "Option C": "Escherichia coli",
+  "Option D": "Proteus mirabilis",
+  "correctAnswer": "D"
+ },
+ {
+  "question": "Which test is preferred to detect MRSA?",
+  "Option A": "Vancomycin MIC",
+  "Option B": "Cefoxitin disc diffusion",
+  "Option C": "Oxacillin broth microdilution",
+  "Option D": "Gram stain",
+  "correctAnswer": "B"
+ },
+ {
+  "question": "What is the primary goal of de-escalation in AMS?",
+  "Option A": "Switch IV to oral antibiotics",
+  "Option B": "Broaden empirical coverage",
+  "Option C": "Narrow therapy based on culture",
+  "Option D": "Avoid lab testing",
+  "correctAnswer": "C"
+ },
+ {
+  "question": "Which intervention is a core AMS strategy for reducing C. difficile infection rates in hospitals?",
+  "Option A": "Increasing vancomycin use",
+  "Option B": "Restricting fluoroquinolone use",
+  "Option C": "Routine antifungal prophylaxis",
+  "Option D": "Universal MRSA screening",
+  "correctAnswer": "B"
+ },
+ {
+  "question": "For community-acquired pneumonia (CAP), which stewardship principle is most emphasized?",
+  "Option A": "Prolonged dual therapy",
+  "Option B": "Use of broad-spectrum antibiotics for all",
+  "Option C": "Early switch from IV to oral antibiotics",
+  "Option D": "Empiric antifungal therapy",
+  "correctAnswer": "C"
+ },
+ {
+  "question": "In AMS, which metric best measures antibiotic consumption across diseases?",
+  "Option A": "Number of prescriptions",
+  "Option B": "Hospital readmission rate",
+  "Option C": "Number of cultures sent",
+  "Option D": "Defined daily dose (DDD) per 1,000 patient-days",
+  "correctAnswer": "D"
+ },
+ {
+  "question": "Which of the following is a disease-specific AMS intervention for sepsis?",
+  "Option A": "Immediate broad-spectrum antibiotics, then de-escalate based on cultures",
+  "Option B": "Use antivirals empirically",
+  "Option C": "Avoid all antibiotics",
+  "Option D": "Delay antibiotics until culture results",
+  "correctAnswer": "A"
+ },
+ {
+  "question": "Which is the first-line therapy and dose for uncomplicated malaria (Plasmodium vivax) in adults?",
+  "Option A": "Chloroquine 600 mg base stat, then 300 mg base at 24 and 48 hours",
+  "Option B": "Doxycycline 100 mg BID for 7 days",
+  "Option C": "Quinine 600 mg TID for 7 days",
+  "Option D": "Artemether-lumefantrine 20\/120 mg, 4 tablets BID for 3 days",
+  "correctAnswer": "A"
+ },
+ {
+  "question": "Which antibiotic is preferred for treating Methicillin-resistant Staphylococcus aureus (MRSA) bacteraemia?",
+  "Option A": "Ceftriaxone",
+  "Option B": " Amoxicillin",
+  "Option C": "Azithromycin",
+  "Option D": "Vancomycin",
+  "correctAnswer": "D"
+ },
+ {
+  "question": "For invasive aspergillosis, which antifungal and dose is recommended as first-line?",
+  "Option A": "Caspofungin 70 mg loading, then 50 mg daily",
+  "Option B": "Fluconazole 400 mg daily",
+  "Option C": "Voriconazole 6 mg\/kg IV every 12 hours for 2 doses, then 4 mg\/kg IV every 12 hours",
+  "Option D": "Amphotericin B 1 mg\/kg daily",
+  "correctAnswer": "C"
+ },
+ {
+  "question": "Which is the drug of choice and recommended dose for latent tuberculosis infection?",
+  "Option A": "Rifampicin 600 mg daily for 3 days",
+  "Option B": "Streptomycin 1 g IM daily for 7 days",
+  "Option C": "Ethambutol 800 mg daily for 2 weeks",
+  "Option D": "Isoniazid 300 mg daily for 6–9 months",
+  "correctAnswer": "D"
+ },
+ {
+  "question": "What is the recommended treatment and dose for severe influenza in hospitalized adults?",
+  "Option A": "Amantadine 100 mg BID for 3 days",
+  "Option B": "Oseltamivir 75 mg PO BID for 5 days",
+  "Option C": "Ribavirin 200 mg PO TID for 5 days",
+  "Option D": "Zanamivir 10 mg inhaled BID for 2 days",
+  "correctAnswer": "B"
+ },
+ {
+  "question": "Which antibiotic is most appropriate for treating Pseudomonas aeruginosa in ventilator-associated pneumonia?",
+  "Option A": " Ceftriaxone",
+  "Option B": "Azithromycin",
+  "Option C": "Piperacillin-tazobactam ",
+  "Option D": "Amoxicillin-clavulanate",
+  "correctAnswer": "C"
+ },
+ {
+  "question": "Which AMS intervention is particularly important in managing urinary tract infections (UTIs)?",
+  "Option A": "Limiting antibiotics to symptomatic patients with positive urine cultures",
+  "Option B": "Empiric antifungal therapy",
+  "Option C": "Use of fluoroquinolones for all cases",
+  "Option D": "Prolonged antibiotic courses for all",
+  "correctAnswer": "A"
+ },
+ {
+  "question": "For acute bacterial skin and soft tissue infections, AMS recommends:",
+  "Option A": "Empiric broad-spectrum therapy for all",
+  "Option B": "Combination antifungal and antibacterial therapy",
+  "Option C": "Narrow-spectrum antibiotics targeting likely pathogens",
+  "Option D": "Prolonged IV therapy",
+  "correctAnswer": "C"
+ },
+ {
+  "question": "In AMS, which approach is recommended for febrile neutropenia?",
+  "Option A": "Wait for cultures before starting antibiotics",
+  "Option B": "No antibiotics needed",
+  "Option C": "Use antivirals first",
+  "Option D": " Immediate empiric broad-spectrum antibiotics, reassess and de-escalate based on cultures",
+  "correctAnswer": "D"
+ },
+ {
+  "question": "Which stewardship strategy is vital for reducing resistance in HIV treatment programs?",
+  "Option A": "Adherence monitoring and resistance testing",
+  "Option B": "Routine monotherapy",
+  "Option C": "Universal use of protease inhibitors",
+  "Option D": "Adherence monitoring and resistance testing",
+  "correctAnswer": "D"
+ },
+ {
+  "question": "For hospital-acquired bloodstream infections, AMS programs should emphasize:",
+  "Option A": "Rapid diagnostics and targeted therapy",
+  "Option B": "Routine use of carbapenems",
+  "Option C": "Prolonged broad-spectrum therapy",
+  "Option D": "Empiric antifungal therapy for all",
+  "correctAnswer": "A"
+ },
+ {
+  "question": "The five-step cycle to infection prevention and control improvement",
+  "Option A": " Preparing, Financial auditing, recruitment process, safety assessment, therapeutic drug monitoring.",
+  "Option B": "Preparing, assessment, action plan, Assessing impact, Sustaining the programme over the long term ",
+  "Option C": "  A and B",
+  "Option D": " Preparing, assessment, plan, pharmacovigilance reporting, formulary revision ",
+  "correctAnswer": "B"
+ },
+ {
+  "question": "  Fluroquinolones are often used for ",
+  "Option A": "  Helminthic infection ",
+  "Option B": " Fungal bloodstream infection ",
+  "Option C": " Genitourinary tract infection and hospital acquired infection associated with urinary catheters  ",
+  "Option D": " Viral upper respiratory infection ",
+  "correctAnswer": "C"
+ },
+ {
+  "question": " Among the following drug which is the drug that comes under Access group in AWaRe?",
+  "Option A": "Azithromycin and ciprofloxacin ",
+  "Option B": "Amikacin and gentamycin",
+  "Option C": "Azithromycin and ciprofloxacin ",
+  "Option D": "None of the above drug",
+  "correctAnswer": "B"
+ },
+ {
+  "question": "Which is the drug of choice for treatment of Listeria monocytogenes meningitis?",
+  "Option A": "Ceftriaxone",
+  "Option B": "Vancomycin",
+  "Option C": "Ampicillin",
+  "Option D": "Meropenem",
+  "correctAnswer": "C"
+ },
+ {
+  "question": " Which is true regarding surgical site infection (SSI) prevention?",
+  "Option A": "Shaving with razors is preferred over clippers",
+  "Option B": "Hair removal must always be done regardless of site",
+  "Option C": "Prophylactic antibiotics should be continued for 48 hours post-surgery",
+  "Option D": "Maintain normothermia intraoperatively ",
+  "correctAnswer": "D"
+ },
+ {
+  "question": "  Which antibiotic is commonly associated with Clostridium difficile infection?",
+  "Option A": "Clindamycin",
+  "Option B": "Metronidazole",
+  "Option C": "Vancomycin",
+  "Option D": "azithromycin ",
+  "correctAnswer": "A"
+ },
+ {
+  "question": "which of the following PPE components is NOT necessary for standard contact precautions?",
+  "Option A": "Gloves",
+  "Option B": "N95 respirator",
+  "Option C": "Hand hygiene",
+  "Option D": "Gown",
+  "correctAnswer": "B"
+ },
+ {
+  "question": "  For hand hygiene, which formulation is recommended when hands are NOT visibly soiled?",
+  "Option A": "Soap and water only",
+  "Option B": "Chlorhexidine scrub",
+  "Option C": "Alcohol-based hand rub",
+  "Option D": "Povidone-iodine solution",
+  "correctAnswer": "C"
+ },
+ {
+  "question": " Which antimicrobial is primarily excreted via bile and suitable for treating biliary tract infections?",
+  "Option A": "Gentamycin ",
+  "Option B": "Cefazolin",
+  "Option C": " cefuroxime ",
+  "Option D": "Ceftriaxone",
+  "correctAnswer": "D"
+ },
+ {
+  "question": "  Which antibiotic is known to cause serotonin syndrome when combined with SSRIs?",
+  "Option A": " Azithromycin",
+  "Option B": "Meropenem",
+  "Option C": "Cefepime",
+  "Option D": "Linezolid",
+  "correctAnswer": "D"
+ },
+ {
+  "question": " Which antimicrobial causes “Grey Baby Syndrome”?",
+  "Option A": "Vancomycin",
+  "Option B": "Ceftriaxone",
+  "Option C": "Gentamicin",
+  "Option D": "Chloramphenicol",
+  "correctAnswer": "D"
+ },
+ {
+  "question": " Which antibiotic is preferred for treating syphilis?",
+  "Option A": "Penicillin G",
+  "Option B": "penicillin V ",
+  "Option C": "amoxicillin ",
+  "Option D": "amoxicillin ",
+  "correctAnswer": "A"
+ },
+ {
+  "question": "What is AMS in health care and antibiotic use ",
+  "Option A": "Improve hospital management ",
+  "Option B": "Manage hospital financial budget",
+  "Option C": "Prevent antibiotic selection pressure and optimize their use",
+  "Option D": "prevent spread of bacteria and infections ",
+  "correctAnswer": "C"
+ },
+ {
+  "question": "Which antimicrobial agent reaction is known to cause 'Red Man Syndrome'?",
+  "Option A": "Amphotericin B",
+  "Option B": "Vancomycin",
+  "Option C": " Aztreonam",
+  "Option D": "Linezolid",
+  "correctAnswer": "B"
+ },
+ {
+  "question": "Which of the following pathogens is most commonly associated with\nnosocomial infections caused by multidrug-resistant strains in intensive care\nunits?",
+  "Option A": "Streptococcus pneumoniae",
+  "Option B": "Haemophilus influenzae",
+  "Option C": "Acinetobacter baumannii",
+  "Option D": "Neisseria meningitidis",
+  "correctAnswer": "C"
+ },
+ {
+  "question": "In antimicrobial stewardship, what is the primary purpose of implementing\nprospective audit and feedback?",
+  "Option A": "To reduce hospital readmission rates",
+  "Option B": "To increase patient satisfaction scores",
+  "Option C": "To optimize antibiotic use and reduce resistance",
+  "Option D": "To streamline hospital billing processes",
+  "correctAnswer": "C"
+ },
+ {
+  "question": "Which infection control measure is most effective in preventing the\ntransmission of Clostridium difficile in a healthcare setting?",
+  "Option A": "Airborne precautions",
+  "Option B": "Universal masking of all healthcare workers",
+  "Option C": "Droplet precautions",
+  "Option D": "Contact precautions with emphasis on hand hygiene",
+  "correctAnswer": "D"
+ },
+ {
+  "question": "Which antimicrobial drug class is most likely to be associated with the\ndevelopment of Clostridioides difficile-associated diarrhea?",
+  "Option A": "Macrolides",
+  "Option B": "Fluoroquinolones",
+  "Option C": "Fluoroquinolones",
+  "Option D": "Fluoroquinolones",
+  "correctAnswer": "B"
+ },
+ {
+  "question": "In the context of antimicrobial resistance, what does the term “MIC creep”\nrefer to?",
+  "Option A": "A gradual increase in the minimum inhibitory concentration of an antibiotic\nover timeOption ",
+  "Option B": "The spread of resistant bacteria across geographic regions",
+  "Option C": "The overuse of antibiotics in outpatient settings",
+  "Option D": "The overuse of antibiotics in outpatient settings",
+  "correctAnswer": "A"
+ },
+ {
+  "question": "Which of the following is a key component of the “Four Moments of Antibiotic\nDecision Making” in antimicrobial stewardship?",
+  "Option A": "Adjusting antibiotic doses based on patient weight",
+  "Option B": "Reassessing antibiotic therapy after 48–72 hours",
+  "Option C": "Reassessing antibiotic therapy after 48–72 hours",
+  "Option D": "Prescribing broad-spectrum antibiotics as first-line therapy",
+  "correctAnswer": "B"
+ },
+ {
+  "question": "Which pathogen is most likely to be resistant to vancomycin in a patient with a\nhistory of prolonged hospitalization?",
+  "Option A": "Methicillin-resistant Staphylococcus aureus (MRSA)",
+  "Option B": "Enterococcus faecium",
+  "Option C": "Streptococcus pyogenes",
+  "Option D": "Escherichia coli",
+  "correctAnswer": "B"
+ },
+ {
+  "question": "Which infection control strategy is most effective for preventing the spread of\nmultidrug-resistant tuberculosis (MDR-TB)?",
+  "Option A": "Contact precautions with glove and gown use",
+  "Option B": "Standard precautions with routine handwashing",
+  "Option C": "Airborne precautions with negative pressure rooms",
+  "Option D": "Droplet precautions with surgical masks",
+  "correctAnswer": "C"
+ },
+ {
+  "question": "What is the primary mechanism of resistance in carbapenem-resistant\nEnterobacteriaceae (CRE)?",
+  "Option A": "Production of carbapenemase enzymes",
+  "Option B": "Efflux pump overexpression",
+  "Option C": "Efflux pump overexpression",
+  "Option D": "Decreased outer membrane permeability",
+  "correctAnswer": "A"
+ },
+ {
+  "question": "Which antimicrobial stewardship intervention is most likely to reduce\ninappropriate prescribing in outpatient settings?",
+  "Option A": "Mandatory infectious disease consultation for all prescriptions",
+  "Option B": "Routine use of combination antibiotic therapy",
+  "Option C": "Restricting all antibiotics to hospital pharmacies",
+  "Option D": "Implementation of delayed prescribing strategies",
+  "correctAnswer": "D"
+ },
+ {
+  "question": "Which of the following is a key indicator of successful infection control in a\nhospital setting?",
+  "Option A": "Higher patient turnover rates",
+  "Option B": "Increased length of hospital stay",
+  "Option C": "Reduced incidence of healthcare-associated infections (HAIs)",
+  "Option D": "Increased use of broad-spectrum antibiotics",
+  "correctAnswer": "C"
+ },
+ {
+  "question": "Which antifungal agent is most effective against invasive aspergillosis in\nimmunocompromised patients?",
+  "Option A": "Voriconazole",
+  "Option B": "Fluconazole",
+  "Option C": "Amphotericin B",
+  "Option D": "Caspofungin",
+  "correctAnswer": "A"
+ },
+ {
+  "question": "What is the primary goal of de-escalation in antimicrobial therapy?",
+  "Option A": "To reduce the cost of treatment",
+  "Option B": "To tailor therapy based on culture results and clinical response",
+  "Option C": "To switch from narrow-spectrum to broad-spectrum antibiotics",
+  "Option D": "To increase the duration of antibiotic therapy",
+  "correctAnswer": "B"
+ },
+ {
+  "question": "Which of the following is a common challenge in implementing effective\ninfection control measures in resource-limited settings?",
+  "Option A": "Overuse of personal protective equipment",
+  "Option B": "Excessive availability of trained infection control specialists",
+  "Option C": "Over-reporting of healthcare-associated infections",
+  "Option D": "Lack of access to rapid diagnostic tools",
+  "correctAnswer": "D"
+ },
+ {
+  "question": "Which antibiotic is most likely to be ineffective against infections caused by\nextended-spectrum beta-lactamase (ESBL)-producing organisms?",
+  "Option A": "Meropenem",
+  "Option B": "Piperacillin-tazobactam",
+  "Option C": "Ceftriaxone",
+  "Option D": "Ertapenem",
+  "correctAnswer": "C"
+ },
+ {
+  "question": "Which of following is not a core element of anti-microbial stewardship\nprograms according to Centre for control and prevention?",
+  "Option A": "Drug formulary restriction",
+  "Option B": "Leadership commitment",
+  "Option C": "Education and training",
+  "Option D": "Reporting and feedback",
+  "correctAnswer": "A"
+ }
 ]
